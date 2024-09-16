@@ -6,8 +6,8 @@ import org.springframework.scheduling.annotation.EnableScheduling
 
 @SpringBootApplication
 @EnableScheduling
-class HearPumpApplication
+class HeatPumpApplication
 
 fun main(args: Array<String>) {
-    runApplication<HearPumpApplication>(*args)
+    runApplication<HeatPumpApplication>(*args)
 }

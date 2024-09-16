@@ -68,7 +68,7 @@ class HeatPumpService(
             val metrics = MetricsModel(
                 temperature = temperature,
                 efficiency = efficiency,
-                heatPump = heatPump
+                heatPump = heatPump,
             )
 
             metricsRepository.save(metrics)

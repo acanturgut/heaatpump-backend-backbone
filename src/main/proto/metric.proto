@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.heatpump.backbone.grpc";
+option java_outer_classname = "MetricsProto";
+
+service MetricsProtoService {
+  rpc GetMetrics (MetricsRequest) returns (MetricsResponse);
+}
+
+message MetricsResponse {
+ int64 heatPumpId = 1;
+ double temperature = 2;
+ double efficiency = 3;
+ int64 unixTimeStamp = 4;
+}
+
+message MetricsRequest {
+  int64 heatPumpId = 1;
+}

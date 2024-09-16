@@ -5,6 +5,11 @@ services:
       - "5432:5432"
     restart: always
     environment:
-        POSTGRES_USER: canturgut
-        POSTGRES_PASSWORD: canturgut
-        POSTGRES_DB: can_db
+        POSTGRES_USER: ${postgres_user}
+        POSTGRES_PASSWORD: ${postgres_password}
+        POSTGRES_DB: ${postgres_db}
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - "8080:8080"

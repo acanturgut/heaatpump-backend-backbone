@@ -1,1 +1,1 @@
-rootProject.name = "demo-1"
+rootProject.name = "heatpump-backbone"

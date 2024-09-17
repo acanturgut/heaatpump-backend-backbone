@@ -17,7 +17,7 @@ class HeatPumpController(private val heatPumpService: HeatPumpService) {
         return ResponseEntity.ok(heatPumpsWithMetrics)
     }
 
-    @GetMapping("/{heatPumpId}/all/metrics")
+    @GetMapping("/{heatPumpId}/metrics")
     fun getHeatPumpWithAllMetrics(@PathVariable heatPumpId: Long): ResponseEntity<HeatPumpWithAllMetricsDTO> {
         val heatPumpWithMetrics = heatPumpService.getHeatPumpWithAllMetrics(heatPumpId)
         return ResponseEntity.ok(heatPumpWithMetrics)

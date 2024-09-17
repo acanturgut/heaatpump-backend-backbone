@@ -29,6 +29,7 @@ class HeatPumpService(
         return heatPumps.map { heatPump ->
             val latestMetrics = metricsRepository.findTopByHeatPumpOrderByTimestampDesc(heatPump)
             HeatPumpWithLatestMetricsDTO(
+                heatPumpId = heatPump.id!!,
                 heatPumpName = heatPump.name,
                 latestMetrics = latestMetrics?.toDTO()
             )
@@ -46,6 +47,7 @@ class HeatPumpService(
         val allMetrics = metricsRepository.findAllByHeatPump(heatPump)
 
         return HeatPumpWithAllMetricsDTO(
+            heatPumpId = heatPump.id!!,
             heatPumpName = heatPump.name,
             metrics = allMetrics.map { it.toDTO() }
         )

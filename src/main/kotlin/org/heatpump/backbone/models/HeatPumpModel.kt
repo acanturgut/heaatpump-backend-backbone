@@ -20,11 +20,13 @@ data class HeatPumpModel(
 )
 
 data class HeatPumpWithLatestMetricsDTO(
+    val heatPumpId: Long,
     val heatPumpName: String,
     val latestMetrics: MetricsDTO?
 )
 
 data class HeatPumpWithAllMetricsDTO(
+    val heatPumpId: Long,
     val heatPumpName: String,
     val metrics: List<MetricsDTO>
 )

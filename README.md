@@ -24,6 +24,6 @@ spring.jpa.hibernate.ddl-auto=update
 
 ### Future Tasks
 
+- Add alternatives for gRPC and move DTO's to proto. 
 - Connect Grafana: Integrate Grafana to visualize and stream metrics.
-- Environment Configuration: Move application.properties to environment variables for better configuration management.
 - Add Tests: Expand the application’s test coverage with more unit and integration tests.
